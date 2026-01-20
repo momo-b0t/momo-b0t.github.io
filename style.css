@@ -1,0 +1,148 @@
+:root {
+    --bg-dark: #1a1a1a;
+    --primary-peach: #FFCCBB;
+    --mint: #C1E1C1;
+    --orange: #FF8833;
+    --soft-red: #FF6655;
+    --white: #F9F9F9;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-peach);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: var(--white);
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #252525;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: var(--white);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--primary-peach);
+    color: var(--bg-dark);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 1.5rem auto 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.accent-peach { color: var(--primary-peach); }
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+    font-size: 4rem;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-peach);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--orange);
+    box-shadow: 0 0 15px var(--primary-peach);
+}
+
+/* Features Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 10% 100px;
+}
+
+.card {
+    background: #252525;
+    padding: 30px;
+    border-radius: 20px;
+    border-bottom: 4px solid var(--primary-peach);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-admin { border-color: var(--soft-red); }
+.card-fun { border-color: var(--mint); }
