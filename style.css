@@ -55,7 +55,7 @@ nav {
     display: none;
     position: absolute;
     right: 0;
-    background-color: #252525;
+    background-color: #1f1d2e;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -133,7 +133,7 @@ nav {
 }
 
 .card {
-    background: #252525;
+    background: #1f1d2e;
     padding: 30px;
     border-radius: 20px;
     border-bottom: 4px solid var(--primary-peach);
